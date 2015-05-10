@@ -11,8 +11,7 @@ public class Main
         System.out.println(confusedPerson2.clone().clone().getName());
     }
 
-    private void doubleClone(Cloneable<?> confusedPerson2)
-    {
+    private void doubleClone(Cloneable<?> confusedPerson2) {
         confusedPerson2.clone();
     }
 

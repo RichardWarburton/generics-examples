@@ -1,4 +1,4 @@
-package curiously_recurring.wildcards;
+package wildcards;
 
 import java.util.ArrayList;
 import java.util.Collections;
