@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'idea'
+
+defaultTasks 'clean', 'test'
 
 sourceCompatibility = 1.8
 version = '1.0'
@@ -10,3 +13,4 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
