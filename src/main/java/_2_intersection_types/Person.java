@@ -16,29 +16,16 @@ public class Person
         System.out.println(person);
     }
 
-    private static <I extends DataInput & Closeable> Person read(I input)
+    private static <I extends DataInput & Closeable> Person read(I source)
     {
-        try
+        try(I input = source)
         {
             return new Person(input.readUTF(), input.readInt());
         }
         catch (IOException e)
         {
             e.printStackTrace();
-            close(input);
             return null;
-        }
-    }
-
-    private static void close(Closeable input)
-    {
-        try
-        {
-            input.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
         }
     }
 
