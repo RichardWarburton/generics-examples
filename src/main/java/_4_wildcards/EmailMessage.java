@@ -1,4 +1,4 @@
-package wildcards;
+package _4_wildcards;
 
 public class EmailMessage extends Message {
 

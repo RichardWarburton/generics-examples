@@ -1,4 +1,4 @@
-package curiously_recurring.non_recurring;
+package _3_curiously_recurring.non_recurring;
 
 public class Main
 {
