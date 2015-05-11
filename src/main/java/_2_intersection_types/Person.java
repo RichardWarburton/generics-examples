@@ -1,24 +1,19 @@
 package _2_intersection_types;
 
-import java.io.Closeable;
-import java.io.DataInput;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 public class Person
 {
     public static void main(String[] args) throws IOException
     {
-        RandomAccessFile randomAccessFile = new RandomAccessFile("src/main/resources/person", "rw");
+        RandomAccessFile randomAccess = new RandomAccessFile("src/main/resources/person", "rw");
+        DataInputStream stream = new DataInputStream(new FileInputStream("src/main/resources/person"));
 
-        /*randomAccessFile.writeUTF("Don Draper");
-        randomAccessFile.writeInt(89);
-        randomAccessFile.seek(0);*/
-
-        Person person = read(randomAccessFile);
+        Person person = read(randomAccess);
         System.out.println(person);
 
-        randomAccessFile.close();
+        person = read(stream);
+        System.out.println(person);
     }
 
     private static <I extends DataInput & Closeable> Person read(I input)
