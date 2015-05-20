@@ -2,25 +2,25 @@ package _2_intersection_types;
 
 import java.io.*;
 
-public class Person
+public class PersonWithGenerics
 {
     public static void main(String[] args) throws IOException
     {
-        //RandomAccessFile randomAccess = new RandomAccessFile("src/main/resources/person", "rw");
+        RandomAccessFile randomAccess = new RandomAccessFile("src/main/resources/person", "rw");
         DataInputStream stream = new DataInputStream(new FileInputStream("src/main/resources/person"));
 
-        Person person = read(stream);
+        PersonWithGenerics person = read(randomAccess);
         System.out.println(person);
 
-        /*person = read(randomAccess);
-        System.out.println(person);*/
+        person = read(stream);
+        System.out.println(person);
     }
 
-    private static Person read(DataInputStream source)
+    private static <I extends DataInput & Closeable> PersonWithGenerics read(I source)
     {
-        try(DataInputStream input = source)
+        try(I input = source)
         {
-            return new Person(input.readUTF(), input.readInt());
+            return new PersonWithGenerics(input.readUTF(), input.readInt());
         }
         catch (IOException e)
         {
@@ -29,7 +29,7 @@ public class Person
         }
     }
 
-    public Person(String name, int age)
+    public PersonWithGenerics(String name, int age)
     {
         this.name = name;
         this.age = age;
