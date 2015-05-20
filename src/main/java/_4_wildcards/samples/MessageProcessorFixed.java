@@ -1,4 +1,6 @@
-package _4_wildcards;
+package _4_wildcards.samples;
+
+import _4_wildcards.Message;
 
 import java.util.List;
 import java.util.function.Consumer;

@@ -1,4 +1,4 @@
-package _4_wildcards;
+package _4_wildcards.samples;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,8 @@
-package _4_wildcards;
+package _4_wildcards.samples;
+
+import _4_wildcards.EmailMessage;
+import _4_wildcards.Message;
+import _4_wildcards.TextMessage;
 
 public class CovariantArrays {
 

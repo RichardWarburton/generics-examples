@@ -1,10 +1,15 @@
-package _4_wildcards;
+package _4_wildcards.samples;
+
+import _4_wildcards.EmailMessage;
+import _4_wildcards.Message;
+import _4_wildcards.TextMessage;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class GenericsProblem {
+public class GenericsSample
+{
 
     public static void main(String[] args) {
 
@@ -25,8 +30,8 @@ public class GenericsProblem {
         // accepted because List<EmailMessage> <: List<? extends Message>
         MessageProcessorFixed.logAll(emailMessageList);
 
-        Consumer<Message> processMessage = GenericsProblem::processMessage;
-        Consumer<Object> print = GenericsProblem::print;
+        Consumer<Message> processMessage = GenericsSample::processMessage;
+        Consumer<Object> print = GenericsSample::print;
 
         MessageProcessorProblem.logAllWithAction(messageList, processMessage);
 
@@ -50,6 +55,5 @@ public class GenericsProblem {
     public static void print(Object o){
         System.out.println(o);
     }
-
 
 }

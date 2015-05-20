@@ -1,8 +1,11 @@
-package _4_wildcards;
+package _4_wildcards.samples;
 
+
+import _4_wildcards.EmailMessage;
+import _4_wildcards.Message;
+import _4_wildcards.TextMessage;
 
 public class SimpleSubtyping {
-
 
     public static void main(String[] args) {
         Message m1 = new TextMessage("Hello");
