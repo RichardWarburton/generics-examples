@@ -1,4 +1,4 @@
-package _2_intersection_types;
+package _2_intersection_types.samples;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

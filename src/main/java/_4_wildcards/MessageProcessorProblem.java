@@ -1,5 +1,7 @@
 package _4_wildcards;
 
+import _4_wildcards.Message;
+
 import java.util.List;
 import java.util.function.Consumer;
 
