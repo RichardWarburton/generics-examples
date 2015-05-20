@@ -18,4 +18,9 @@ public class ConfusedPerson2 implements Cloneable<ConfusedPerson2>
     {
         return name;
     }
+
+    public String toString()
+    {
+        return getName();
+    }
 }

@@ -20,4 +20,9 @@ public class ConfusedPerson1 implements Cloneable<String>
     {
         return name;
     }
+
+    public String toString()
+    {
+        return getName();
+    }
 }
