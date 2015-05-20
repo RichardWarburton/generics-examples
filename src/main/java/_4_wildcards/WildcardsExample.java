@@ -2,39 +2,39 @@ package _4_wildcards;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class WildcardsExample
 {
     public static void main(String[] args)
     {
         // set up
-        List<Message> messageList = Arrays.asList(
+        List<Message> messages = Arrays.asList(
             new EmailMessage("Hello by email"),
             new TextMessage("Hello by text")
         );
 
-        List<EmailMessage> emailMessageList
+        List<EmailMessage> emailMessages
             = Arrays.asList(new EmailMessage("Hello by email"));
 
-        List<TextMessage> textMessageList
+        List<TextMessage> textMessages
             = Arrays.asList(new TextMessage("Hello by text"));
 
+        // 0. log a message
         // 1. Lists aren't covariant
-        // 2. Example with consumer
-        // 3. Wildcards
+        // 2. Wildcards
     }
 
-    static void logAll(List<Message> messages)
+    static void log(Message message)
     {
-        for (Message m : messages)
+        System.out.println(message);
+    }
+
+    static void logAll(List<? extends Message> messages)
+    {
+        for (Message message : messages)
         {
-            System.out.println(m);
+            System.out.println(message);
         }
     }
 
-    static void logAllWithAction(List<? extends Message> messages, Consumer<? super Message> action)
-    {
-        messages.forEach(action);
-    }
 }
