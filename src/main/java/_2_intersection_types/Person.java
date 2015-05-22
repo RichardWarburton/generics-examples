@@ -12,7 +12,7 @@ public class Person
         Person person = read(stream);
         System.out.println(person);
 
-        /*person = read(stream);
+        /*person = read(randomAccess);
         System.out.println(person);*/
     }
 
