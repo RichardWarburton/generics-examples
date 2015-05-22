@@ -2,5 +2,5 @@ package _3_curiously_recurring.non_recurring;
 
 public interface Cloneable<T>
 {
-    public T clone();
+    T clone();
 }
