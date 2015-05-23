@@ -5,20 +5,20 @@ import java.util.List;
 
 public class WildcardsExample
 {
+
+    private static final List<Message> messages = Arrays.asList(
+        new EmailMessage("Hello by email"),
+        new TextMessage("Hello by text")
+    );
+
+    private static final List<EmailMessage> emailMessages
+        = Arrays.asList(new EmailMessage("Hello by email"));
+
+    private static final List<TextMessage> textMessages
+        = Arrays.asList(new TextMessage("Hello by text"));
+
     public static void main(String[] args)
     {
-        // set up
-        List<Message> messages = Arrays.asList(
-            new EmailMessage("Hello by email"),
-            new TextMessage("Hello by text")
-        );
-
-        List<EmailMessage> emailMessages
-            = Arrays.asList(new EmailMessage("Hello by email"));
-
-        List<TextMessage> textMessages
-            = Arrays.asList(new TextMessage("Hello by text"));
-
         // 0. log a message
         // 1. Lists aren't covariant
         // 2. Wildcards
