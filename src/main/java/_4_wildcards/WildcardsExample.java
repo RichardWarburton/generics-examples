@@ -29,7 +29,7 @@ public class WildcardsExample
         System.out.println(message);
     }
 
-    static void logAll(List<? extends Message> messages)
+    static void logAll(List<Message> messages)
     {
         for (Message message : messages)
         {
