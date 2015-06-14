@@ -20,14 +20,24 @@ public class WildcardsExample
     public static void main(String[] args)
     {
         // 0. log a message
-        // 1. Lists aren't covariant
-        // 2. Wildcards
-        // 3. Consumer parameter
+        // 1. log arrays
+        // 2. assignment
+        // 3. Lists aren't covariant
+        // 4. Wildcards
+        // 5. Consumer parameter
     }
 
     static void log(Message message)
     {
         System.out.println(message);
+    }
+
+    static void logAll(Message[] messages)
+    {
+        for (Message message : messages)
+        {
+            System.out.println(message);
+        }
     }
 
     static void logAll(List<Message> messages)
