@@ -22,6 +22,7 @@ public class WildcardsExample
         // 0. log a message
         // 1. Lists aren't covariant
         // 2. Wildcards
+        // 3. Consumer parameter
     }
 
     static void log(Message message)
