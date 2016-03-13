@@ -1,4 +1,4 @@
-package _3_curiously_recurring.non_recurring;
+package _3_curiously_recurring.non_recurring_cloneable;
 
 public class ConfusedPerson2 implements Cloneable<ConfusedPerson2>
 {
