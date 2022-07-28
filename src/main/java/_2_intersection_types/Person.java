@@ -19,9 +19,9 @@ public class Person
 
     private static Person read(DataInputStream source)
     {
-        try(DataInputStream input = source)
+        try (source)
         {
-            return new Person(input.readUTF(), input.readInt());
+            return new Person(source.readUTF(), source.readInt());
         }
         catch (IOException e)
         {
