@@ -3,7 +3,11 @@ apply plugin: 'idea'
 
 defaultTasks 'clean', 'test'
 
-sourceCompatibility = 17
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 version = '1.0'
 
 repositories {
