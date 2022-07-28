@@ -3,7 +3,7 @@ apply plugin: 'idea'
 
 defaultTasks 'clean', 'test'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 17
 version = '1.0'
 
 repositories {
